@@ -1,6 +1,10 @@
-import { useState } from "react";
-import reactLogo from "/assets/react.svg";
 import "./styles/App.css";
+import { useState } from "react";
+import { Login } from "./pages/login";
+import { Signup } from "./pages/signup";
+import { Homepage } from "./pages/homepage";
+import { CheckAuth } from "./utlis/CheckAuth";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
