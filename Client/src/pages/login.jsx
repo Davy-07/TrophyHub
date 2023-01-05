@@ -9,8 +9,12 @@ export const Login = () => {
           <span className="form__title">Sign-up</span>
           <form action="">
             {/* Textfields */}
-            <input type="email" placeholder="email" />
-            <input type="password" placeholder="password" />
+            <input className="form__field" type="email" placeholder="email" />
+            <input
+              className="form__field"
+              type="password"
+              placeholder="password"
+            />
             {/* Log-in Button */}
             <button>Log in</button>
           </form>

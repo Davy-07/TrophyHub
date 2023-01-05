@@ -1,4 +1,5 @@
 @import url("globals.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   font-family: var(--ff-primary);
 }
@@ -31,13 +32,13 @@
   font-size: 24px;
 }
 
-input {
+.form__field {
   border: none;
   padding: 15px;
   border-bottom: 1px solid var(--clr-primary);
 }
 
-input::placeholder {
+.form__field::placeholder {
   font-size: 16px;
   color: var(--clr-gray);
 }
@@ -48,11 +49,11 @@ input::placeholder {
   flex-direction: column;
 }
 
-.file--input {
+.file__input {
   display: none;
 }
 
-.file--label {
+.file__label {
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -60,11 +61,11 @@ input::placeholder {
   color: var(--clr-accent-light);
 }
 
-img {
+.file__label img {
   width: 32px;
 }
 
-button {
+.form button {
   background-color: var(--clr-primary);
   font-weight: bold;
   color: white;
@@ -83,24 +84,6 @@ button {
   text-decoration: none;
 }
 
-.home {
-  border: 1px solid white;
-  border-radius: 10px;
-  width: 65%;
-  height: 80%;
-  display: flex;
-  overflow: hidden;
-}
-
-.sidebar {
-  flex: 1;
-  border-right: 1px solid var(--clr-neutral-light);
-  background-color: var(--clr-neutral);
-}
-
-.chat {
-  flex: 2;
-}
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -114,39 +97,13 @@ button {
   }
 } */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-:root {
-  --white: #f0f0f0;
-  --black: #0f2027;
-  --green-dark: #203a43;
-  --green-olive: #2c5364;
-  --blue: rgb(41, 57, 194);
-  --green: #90c372;
-  --red: #ff3860;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  background: linear-gradient(
-    to right,
-    var(--black),
-    var(--green-dark),
-    var(--green-olive)
-  );
-}
 .container {
   margin: 20vh auto 0 auto;
 }
 
 #heading {
   padding-bottom: 1em;
-  color: var(--white);
+  color: var(--clr-white);
   text-align: center;
 }
 #info {
@@ -157,7 +114,7 @@ body {
   background: whitesmoke;
 }
 #info h1 {
-  color: var(--black);
+  color: var(--clr-black);
   text-align: center;
   padding: 6px;
 }
@@ -168,7 +125,7 @@ body {
   color: white;
   border: none;
   border-radius: 4px;
-  background: var(--blue);
+  background: var(--clr-blue);
 }
 
 .fields {
@@ -177,7 +134,7 @@ body {
 }
 
 .fields input {
-  border: 2px solid var(--white);
+  border: 2px solid var(--clr-white);
   border-radius: 4px;
   display: block;
   padding: 10px;
@@ -193,17 +150,17 @@ body {
   background: white url(images/invalid.png) no-repeat;
   background-position: 97%;
   background-size: 8% 85%;
-  border-color: var(--red);
+  border-color: var(--clr-red);
 }
 
 .fields input.success {
   /* background: white url(images/valid.png) no-repeat right;
   background-position: 97%;
   background-size: 8% 85%; */
-  border-color: var(--green);
+  border-color: var(--clr-green);
 }
 
 .fields .error {
-  color: var(--red);
+  color: var(--clr-red);
   font-size: 12px;
 }
