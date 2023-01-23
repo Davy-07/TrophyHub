@@ -7,7 +7,7 @@ export const Login = () => {
       <div className="wrapper">
         <AuthSidebar />
         <div className="form">
-          <span className="form__logo">Chat</span>
+          <span className="form__logo">Trophy Hub</span>
           <span className="form__title">Log in</span>
           <form action="">
             {/* Textfields */}

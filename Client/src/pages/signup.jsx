@@ -8,7 +8,7 @@ export const Signup = () => {
       <div className="wrapper">
         <AuthSidebar />
         <div className="form">
-          <span className="form__logo">Lama Chat</span>
+          <span className="form__logo">Trophy Hub</span>
           <span className="form__title">Sign-up</span>
           <form action="">
             {/* Textfields */}
