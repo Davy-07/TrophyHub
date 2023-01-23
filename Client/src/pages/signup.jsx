@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import addAvatar from "/assets/addAvatar.png";
+import { AuthSidebar } from "../components/AuthSidebar";
 export const Signup = () => {
   return (
     <div>
       <div className="wrapper">
+        <AuthSidebar />
         <div className="form">
           <span className="form__logo">Lama Chat</span>
           <span className="form__title">Sign-up</span>

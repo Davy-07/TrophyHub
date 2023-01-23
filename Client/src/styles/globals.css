@@ -1,9 +1,9 @@
 /* Colors & font-sizes */
 :root {
   /* --clr-bg: #414a4c; */
-  --clr-primary: hsl(226, 75%, 70%);
-  --clr-accent: hsl(226, 100%, 83%);
-  --clr-accent-light: hsl(226, 78%, 75%);
+  --clr-primary: hsl(210, 69%, 25%);
+  --clr-accent: hsla(210, 69%, 25%, 0.8);
+  --clr-accent-light: hsla(210, 69%, 25%, 0.8);
   --clr-neutral: hsl(243, 24%, 31%);
   --clr-neutral-light: hsl(242, 22%, 45%);
   --clr-gray: hsl(0, 0%, 69%);
