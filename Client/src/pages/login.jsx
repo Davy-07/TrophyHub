@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { AuthSidebar } from "../components/AuthSidebar";
 export const Login = () => {
   return (
     <div>
       <div className="wrapper">
+        <AuthSidebar />
         <div className="form">
-          <span className="form__logo">Lama Chat</span>
-          <span className="form__title">Sign-up</span>
+          <span className="form__logo">Trophy Hub</span>
+          <span className="form__title">Log in</span>
           <form action="">
             {/* Textfields */}
             <input className="form__field" type="email" placeholder="email" />
