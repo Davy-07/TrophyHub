@@ -37,7 +37,7 @@ const register = async(req,res)=>{
     query.language = "English";
 
     try{
-        const response = await mojoauth.mojoAPI.signinWithPhoneOTP(phone,query);
+        const response = await mojoauth.mojoAPI.signinWithEmailOTP(email,query);
         const{state_id} = response;
         const new_user = await User.create({name,email,phone,password});
         console.log(new_user);
@@ -52,7 +52,7 @@ const register = async(req,res)=>{
 const verify = async(req,res)=>{
 
     const{state_id,_id,otp} = req.body;
-    const response = await mojoauth.mojoAPI.verifyPhoneOTP(otp,state_id);
+    const response = await mojoauth.mojoAPI.verifyEmailOTP(otp,state_id);
     console.log(response);
     const{authenticated} = response;
     if(authenticated){
