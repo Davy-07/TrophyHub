@@ -3,12 +3,14 @@ const express = require('express');
 const app = express();
 const connectDB = require('./db/connect');
 const authRouter = require('./routes/auth');
+const productRouter = require('./routes/products');
 const notFound = require('./middleware/notFound');
 const errorHandler = require('./middleware/errorHandler');
 const port = 3000;
 
 app.use(express.json());
 app.use('/api/v1/user',authRouter);
+app.use('/api/v1/products',productRouter);
 app.use(notFound);
 app.use(errorHandler);
 

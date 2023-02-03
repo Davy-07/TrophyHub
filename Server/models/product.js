@@ -4,6 +4,10 @@ const productSchema = new mongoose.Schema({
         type: String,
         required:[true, 'Please Provide Product category']
     },
+    subcategory:{
+        type: String,
+        required: [true,"Please Provide Product subcategory"]
+    },
     name:{
         type: String,
         required: [true,'Please Provide Product Name']
