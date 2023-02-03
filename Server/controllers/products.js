@@ -18,7 +18,7 @@ const getProductsBySubCategory = async (req, res) => {
 
     const sub = req.query.sub;
     try {
-        const products = await product.find({ subcategory: sub });
+        const products = await product.find({ subcategory: {$regex:sub,$options:'i'}});
         if (products.length > 0) {
             res.status(200).json({ products });
         }
@@ -35,7 +35,7 @@ const getProductsByCategory = async (req, res) => {
 
     const category = req.query.category;
     try {
-        const products = await product.find({ category });
+        const products = await product.find({ category:{$regex:category,$options:'i'}});
         if (products.length > 0) {
             res.status(200).json({ products });
         }
@@ -51,7 +51,7 @@ const getProductsByName = async (req, res) => {
 
     const name = req.query.product;
     try {
-        const products = await product.findOne({ name });
+        const products = await product.findOne({ name:{$regex:name,$options:'i'}});
         if (products) {
             res.status(200).json({ products });
         }
@@ -73,7 +73,7 @@ const sortByPriceandSize = async (req, res) => {
     }
     console.log(sortlist);
     try {
-        const products = await product.find({ subcategory }).sort(sortlist);
+        const products = await product.find({ subcategory:{$regex:subcategory,options:'i'} }).sort(sortlist);
         res.status(200).json({ products });
     } catch (err) {
         console.log(err);
