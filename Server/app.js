@@ -4,6 +4,7 @@ const app = express();
 const connectDB = require('./db/connect');
 const authRouter = require('./routes/auth');
 const productRouter = require('./routes/products');
+const cartRouter = require('./routes/cart');
 const notFound = require('./middleware/notFound');
 const errorHandler = require('./middleware/errorHandler');
 const port = 3000;
@@ -11,6 +12,7 @@ const port = 3000;
 app.use(express.json());
 app.use('/api/v1/user',authRouter);
 app.use('/api/v1/products',productRouter);
+app.use('/api/v1/cart',cartRouter);
 app.use(notFound);
 app.use(errorHandler);
 

@@ -59,7 +59,6 @@ const verify = async(req,res)=>{
         const verify_user = await User.updateOne({_id},{
             isVerified: true
         })
-        console.log(verify_user);
         res.status(200).json({msg:"OTP Verified"});
     }
     else{
@@ -98,6 +97,7 @@ const signin = async(req,res)=>{
 const demo = async(req,res)=>{
 
         res.status(200).json({message:"Token Verification SuccesFull"});
+        console.log(req.user);
 
 }
 
