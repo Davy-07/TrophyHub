@@ -12,9 +12,11 @@ export const Homepage = () => {
 	}
 	return (
 		<div className='home'>
-			<h1>Home</h1>
-			<button onClick={handleLogout}>Logout</button>
-			{/* <Footer /> */}
+			<div>
+				<h1>Home</h1>
+				<button onClick={handleLogout}>Logout</button>
+			</div>
+			<Footer />
 		</div>
 	);
 };

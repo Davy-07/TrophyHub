@@ -6,8 +6,11 @@
 	--clr-accent-light: hsla(210, 69%, 25%, 0.8);
 	--clr-neutral: hsl(243, 24%, 31%);
 	--clr-neutral-light: hsl(242, 22%, 45%);
-	--clr-gray: hsl(0, 0%, 69%);
 
+	--clr-footer: hsl(252, 66%, 26%);
+	--clr-footer-below: hsl(210, 68%, 20%);
+
+	--clr-gray: hsl(0, 0%, 69%);
 	--clr-white: #f0f0f0;
 	--clr-black: #0f2027;
 	--clr-blue: hsl(234, 65%, 46%);

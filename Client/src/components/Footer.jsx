@@ -1,6 +1,7 @@
 import React from "react";
 import instagram from "../assets/instagram.png";
 export const Footer = () => {
+	const year = new Date().getFullYear();
 	return (
 		<div className='footer'>
 			<div className='footer-sec-padding'>
@@ -58,10 +59,18 @@ export const Footer = () => {
 						<a href='/'>
 							<p>trophieshub@gmail.com</p>
 						</a>
-						<img src={instagram} alt='' />
-						<a href='/'>
+						<a className='social' href='/'>
+							<img src={instagram} alt='' />
 							<p>@TrophyHub</p>
 						</a>
+					</div>
+				</div>
+			</div>
+			<div className='footer-below'>
+				<div className='footer-below-padding'>
+					<div className='footer-copyright'>
+						<div className='inr'>India | INR ₹</div>
+						<div>@{year} TrophiesHub.Inc</div>
 					</div>
 				</div>
 			</div>
