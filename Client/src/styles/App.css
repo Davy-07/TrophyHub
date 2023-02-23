@@ -1,174 +1,109 @@
 @import url("globals.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
-  font-family: var(--ff-primary);
+	font-family: var(--ff-primary);
 }
 
 .wrapper {
-  height: 100vh;
-  display: flex;
-  padding: 90px 200px;
-  background: var(--clr-accent);
+	min-height: 100vh;
+	display: flex;
+	padding: 90px 200px;
+	background: var(--clr-accent);
 }
 .AuthSidebar {
-  background: var(--clr-primary);
-  padding: 60px;
-  height: 100%;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	background: var(--clr-primary);
+	padding: 60px;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .AuthSidebar img {
-  height: 400px;
-  width: 100%;
+	height: 400px;
+	width: 100%;
 }
 .form {
-  width: 50%;
-  gap: 10px;
-  display: flex;
-  text-align: center;
-  padding: 20px 90px;
-  background: white;
-  flex-direction: column;
+	width: 50%;
+	gap: 10px;
+	display: flex;
+	text-align: center;
+	padding: 20px 90px;
+	background: white;
+	flex-direction: column;
 }
 .form__title {
-  color: var(--clr-neutral);
-  font-size: 1em;
+	color: var(--clr-neutral);
+	font-size: 1em;
 }
 
 .form__logo {
-  color: var(--clr-neutral);
-  font-weight: bold;
-  font-size: 24px;
+	color: var(--clr-neutral);
+	font-weight: bold;
+	font-size: 24px;
 }
 
 .form__field {
-  border: none;
-  padding: 15px;
-  border-bottom: 1px solid var(--clr-primary);
+	border: none;
+	padding: 15px;
+	border-bottom: 1px solid var(--clr-primary);
 }
 
 .form__field::placeholder {
-  font-size: 16px;
-  color: var(--clr-gray);
+	font-size: 16px;
+	color: var(--clr-gray);
 }
 
 .form form {
-  gap: 15px;
-  display: flex;
-  flex-direction: column;
+	gap: 15px;
+	display: flex;
+	flex-direction: column;
 }
 
 .file__input {
-  display: none;
+	display: none;
 }
 
 .file__label {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  gap: 10px;
-  color: var(--clr-accent-light);
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	gap: 10px;
+	color: var(--clr-accent-light);
 }
 
 .file__label img {
-  width: 32px;
+	width: 32px;
 }
 
 .form button {
-  background-color: var(--clr-primary);
-  font-weight: bold;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+	background-color: var(--clr-primary);
+	font-weight: bold;
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
 }
 .form__switch {
-  color: var(--clr-neutral);
-  font-size: 16px;
-  margin-top: 10px;
+	color: var(--clr-neutral);
+	font-size: 16px;
+	margin-top: 10px;
 }
 
 .switch__link {
-  color: var(--clr-primary);
-  text-decoration: none;
+	color: var(--clr-primary);
+	text-decoration: none;
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.home {
+	background-color: white;
+	min-height: 100vh;
+}
+
+/* .footer {
 } */
 
-.container {
-  margin: 20vh auto 0 auto;
-}
-
-#heading {
-  padding-bottom: 1em;
-  color: var(--clr-white);
-  text-align: center;
-}
-#info {
-  width: 400px;
-  padding: 20px;
-  margin: auto;
-  border-radius: 4px;
-  background: whitesmoke;
-}
-#info h1 {
-  color: var(--clr-black);
-  text-align: center;
-  padding: 6px;
-}
-#btn {
-  padding: 10px;
-  margin-top: 10px;
-  width: 100%;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  background: var(--clr-blue);
-}
-
-.fields {
-  display: flex;
-  flex-direction: column;
-}
-
-.fields input {
-  border: 2px solid var(--clr-white);
-  border-radius: 4px;
-  display: block;
-  padding: 10px;
-  margin: 8px 0;
-  width: 100%;
-}
-
-.fields input:focus {
-  outline: 0;
-}
-
-.fields input.error {
-  background: white url(images/invalid.png) no-repeat;
-  background-position: 97%;
-  background-size: 8% 85%;
-  border-color: var(--clr-red);
-}
-
-.fields input.success {
-  border-color: var(--clr-green);
-}
-
-.fields .error {
-  color: var(--clr-red);
-  font-size: 12px;
+.footer-links-div img {
+	height: 30px;
+	width: 30px;
 }
