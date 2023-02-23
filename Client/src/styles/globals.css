@@ -1,53 +1,53 @@
 /* Colors & font-sizes */
 :root {
-  /* --clr-bg: #414a4c; */
-  --clr-primary: hsl(210, 69%, 25%);
-  --clr-accent: hsla(210, 69%, 25%, 0.8);
-  --clr-accent-light: hsla(210, 69%, 25%, 0.8);
-  --clr-neutral: hsl(243, 24%, 31%);
-  --clr-neutral-light: hsl(242, 22%, 45%);
-  --clr-gray: hsl(0, 0%, 69%);
+	--clr-bg: #414a4c;
+	--clr-primary: hsl(210, 69%, 25%);
+	--clr-accent: hsla(210, 69%, 25%, 0.8);
+	--clr-accent-light: hsla(210, 69%, 25%, 0.8);
+	--clr-neutral: hsl(243, 24%, 31%);
+	--clr-neutral-light: hsl(242, 22%, 45%);
+	--clr-gray: hsl(0, 0%, 69%);
 
-  --clr-white: #f0f0f0;
-  --clr-black: #0f2027;
-  --clr-blue: hsl(234, 65%, 46%);
-  --clr-green: hsl(98, 40%, 61%);
-  --clr-red: hsl(348, 100%, 61%);
+	--clr-white: #f0f0f0;
+	--clr-black: #0f2027;
+	--clr-blue: hsl(234, 65%, 46%);
+	--clr-green: hsl(98, 40%, 61%);
+	--clr-red: hsl(348, 100%, 61%);
 
-  --ff-primary: "Be Vietnam Pro", sans-serif;
-  --ff-body: var(--ff-primary);
-  --ff-heading: var(--ff-primary);
+	--ff-primary: "Be Vietnam Pro", sans-serif;
+	--ff-body: var(--ff-primary);
+	--ff-heading: var(--ff-primary);
 
-  --fw-regular: 400;
-  --fw-semi-bold: 600;
-  --fw-bold: 800;
+	--fw-regular: 400;
+	--fw-semi-bold: 600;
+	--fw-bold: 800;
 
-  --fs-300: 0.875rem;
-  --fs-500: 1rem;
-  --fs-700: 1.875rem;
-  --fs-900: 2.5rem;
+	--fs-300: 0.875rem;
+	--fs-500: 1rem;
+	--fs-700: 1.875rem;
+	--fs-900: 2.5rem;
 }
 @media (min-width: 50em) {
-  :root {
-    --fs-900: 3.5rem;
-    --fs-700: 2.5rem;
-  }
+	:root {
+		--fs-900: 3.5rem;
+		--fs-700: 2.5rem;
+	}
 }
 
 /* Utilities Classes */
 .text-primary {
-  color: var(--clr-primary);
+	color: var(--clr-primary);
 }
 .text-accent {
-  color: var(--clr-accent);
+	color: var(--clr-accent);
 }
 .text-accent-light {
-  color: var(--clr-accent-light);
+	color: var(--clr-accent-light);
 }
 
 .text-neutral {
-  color: var(--clr-neutral);
+	color: var(--clr-neutral);
 }
 .text-neutral-light {
-  color: var(--clr-neutral-light);
+	color: var(--clr-neutral-light);
 }
