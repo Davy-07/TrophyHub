@@ -132,6 +132,12 @@
   justify-content: space-around;
 }
 
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Footer */
 .footer {
   color: white;
