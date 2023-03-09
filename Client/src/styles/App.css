@@ -1,131 +1,133 @@
 @import url("globals.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
-	font-family: var(--ff-primary);
+  font-family: var(--ff-primary);
 }
 
 .wrapper {
-	min-height: 100vh;
-	display: flex;
-	padding: 90px 200px;
-	background: var(--clr-accent);
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 90px 200px;
+  background: var(--clr-accent);
 }
-.AuthSidebar {
-	background: var(--clr-primary);
-	padding: 60px;
-	height: 100%;
-	width: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+
+.logo {
+  height: 40px;
+  width: 100%;
 }
-.AuthSidebar img {
-	height: 400px;
-	width: 100%;
-}
+
 .form {
-	width: 50%;
-	gap: 10px;
-	display: flex;
-	text-align: center;
-	padding: 20px 90px;
-	background: white;
-	flex-direction: column;
+  gap: 10px;
+  display: flex;
+  text-align: center;
+  padding: 20px 90px;
+  background: white;
+  flex-direction: column;
+}
+
+/* Forgot Password */
+.form .forgot__pass {
+  font-size: 14px;
+  color: var(--clr-gray);
+  text-align: end;
 }
 .form__title {
-	color: var(--clr-neutral);
-	font-size: 1em;
+  color: var(--clr-neutral);
+  font-size: 1em;
 }
 
 .form__logo {
-	color: var(--clr-neutral);
-	font-weight: bold;
-	font-size: 24px;
+  color: var(--clr-neutral);
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .form__field {
-	border: none;
-	padding: 15px;
-	border-bottom: 1px solid var(--clr-primary);
+  border: none;
+  padding: 15px;
+  border-bottom: 1px solid var(--clr-primary);
 }
 
 .form__field::placeholder {
-	font-size: 16px;
-	color: var(--clr-gray);
+  font-size: 16px;
+  color: var(--clr-gray);
 }
 
 .form form {
-	gap: 15px;
-	display: flex;
-	flex-direction: column;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form button {
-	background-color: var(--clr-primary);
-	font-weight: bold;
-	color: white;
-	border: none;
-	padding: 10px;
-	cursor: pointer;
+  background-color: var(--clr-primary);
+  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 .form__switch {
-	color: var(--clr-neutral);
-	font-size: 16px;
-	margin-top: 10px;
+  color: var(--clr-neutral);
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 .switch__link {
-	color: var(--clr-primary);
-	text-decoration: none;
+  color: var(--clr-primary);
+  text-decoration: none;
 }
 
 .home {
-	display: flex;
-	flex-direction: column;
-	background-color: white;
-	min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-height: 100vh;
 }
 
 .footer {
-	margin-top: auto;
-	background-color: var(--clr-footer);
-	color: white;
+  color: white;
+  margin-top: auto;
+  background-color: var(--clr-primary);
 }
 
 .footer-sec-padding {
-	padding: 60px;
+  padding: 60px;
 }
 
 .footer a {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .footer-links {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer-links .social {
-	display: flex;
+  display: flex;
 }
 
 .footer-links-div img {
-	height: 30px;
-	width: 30px;
+  height: 30px;
+  width: 30px;
 }
 
 .footer-below {
-	background-color: var(--clr-footer-below);
+  padding: 20px;
+  background-color: var(--clr-footer-below);
 }
 
 .footer-below-padding {
-	padding: 20px;
+  padding: 20px;
 }
 
 .footer-copyright {
-	display: flex;
-	gap: 10px;
-	justify-content: space-between;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
 }
