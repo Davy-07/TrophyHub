@@ -1,8 +1,8 @@
-
-require('dotenv').config();
-const express = require('express');
-const cookieParser  = require('cookie-parser');
+require("dotenv").config();
+const express = require("express");
+const cookieParser = require("cookie-parser");
 const app = express();
+const cors = require("cors");
 const connectDB = require("./db/connect");
 const authRouter = require("./routes/auth");
 const productRouter = require("./routes/products");
@@ -12,7 +12,13 @@ const errorHandler = require("./middleware/errorHandler");
 const port = 3000;
 
 app.use(cookieParser());
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use("/api/v1/user", authRouter);
 app.use("/api/v1/products", productRouter);

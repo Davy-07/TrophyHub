@@ -7,12 +7,7 @@ import { CheckAuth } from "./utlis/CheckAuth";
 import { Verfication } from "./pages/Verfication";
 import { Test } from "./pages/test";
 
-import {
-  RouterProvider,
-  createBrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);

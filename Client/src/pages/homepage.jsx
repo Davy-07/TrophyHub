@@ -1,7 +1,10 @@
 import React from "react";
+import { Navbar } from "../components/Navbar";
+import { DropDownNavigation } from "../components/DropDownNavigation";
+import { ImageSlider } from "../components/ImageSlider";
+import { KeyPoints } from "../components/KeyPoints";
+import { Footer } from "../components/Footer";
 export const Homepage = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="app">
       <Navbar />

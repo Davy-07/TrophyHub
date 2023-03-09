@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import TrophyHubLogo from "../assets/trophies-hub-logo.png";
+import Cookies from "js-cookie";
+
 export const Login = () => {
   const navigate = useNavigate();
   async function handleLogin(e) {
@@ -14,11 +16,16 @@ export const Login = () => {
           password,
         }),
         headers: {
+          "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json",
         },
+        credentials: "include",
       });
+      console.log(res);
       const result = await res.json();
       console.log(result);
+      const refreshToken = Cookies.get("refresh");
+      console.log(`refrsh token - ${refreshToken}`);
       localStorage.setItem("token", result.token);
       const token = localStorage.getItem("token");
       console.log(`generated token - ${token}`);
