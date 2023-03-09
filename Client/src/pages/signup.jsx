@@ -17,6 +17,11 @@ export const Signup = () => {
               type="text"
               placeholder="User name"
             />
+            <input
+              className="form__field"
+              type="number"
+              placeholder="phone number"
+            />
             <input className="form__field" type="email" placeholder="Email" />
             <input
               className="form__field"
