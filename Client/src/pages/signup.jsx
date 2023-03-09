@@ -1,39 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import addAvatar from "/assets/addAvatar.png";
-import { AuthSidebar } from "../components/AuthSidebar";
+import { useNavigate } from "react-router-dom";
+import TrophyHubLogo from "../assets/trophies-hub-logo.png";
+
 export const Signup = () => {
+  const navigate = useNavigate();
+
+  async function handleSignup(e) {
+    e.preventDefault();
+
+    // [ ] Add Form Validation
+    if (username != "" && email != "" && password != "" && phone != "") {
+      console.log(username);
+      const res = await fetch("http://localhost:3000/api/v1/user/register", {
+        method: "POST",
+        body: JSON.stringify({
+          name: username,
+          email: email,
+          phone: `+91${phone}`,
+          pwd: password,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await res.json();
+      console.log(result.state_id);
+      navigate("/verification", {
+        state: { stateId: result.state_id, userId: result },
+      });
+      console.log(result);
+    }
+  }
+
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [phone, setPhone] = useState("");
+
   return (
     <div>
       <div className="wrapper">
-        <AuthSidebar />
         <div className="form">
-          <span className="form__logo">Trophy Hub</span>
+          <img src={TrophyHubLogo} alt="" className="logo" />
           <span className="form__title">Sign-up</span>
-          <form action="">
+          <form onSubmit={handleSignup}>
             {/* Textfields */}
             <input
+              onChange={(e) => setUsername(e.target.value)}
               className="form__field"
               type="text"
               placeholder="User name"
             />
+<<<<<<< HEAD
             <input
               className="form__field"
               type="number"
               placeholder="phone number"
             />
             <input className="form__field" type="email" placeholder="Email" />
+=======
+>>>>>>> e0a0ac17ab2fe50002ba9ffe8c5a227d904b7b5a
             <input
+              onChange={(e) => setPhone(e.target.value)}
+              className="form__field"
+              type="text"
+              placeholder="Phone Number"
+            />
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              className="form__field"
+              type="email"
+              placeholder="Email"
+            />
+            <input
+              onChange={(e) => setPassword(e.target.value)}
               className="form__field"
               type="password"
               placeholder="Password"
             />
-            {/* Choose a file */}
-            <input id="file" type="file" className="file__input" />
-            <label className="file__label" htmlFor="file">
-              <img src={addAvatar} alt="Add an Avatar" />
-              <span>Add an avatar</span>
-            </label>
             {/* Sign-up Button */}
             <button>Sign up</button>
           </form>

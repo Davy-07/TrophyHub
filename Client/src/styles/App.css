@@ -1,30 +1,23 @@
 @import url("globals.css");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   font-family: var(--ff-primary);
 }
 
 .wrapper {
-  height: 100vh;
   display: flex;
+  min-height: 100vh;
+  align-items: center;
   padding: 90px 200px;
+  justify-content: center;
   background: var(--clr-accent);
 }
-.AuthSidebar {
-  background: var(--clr-primary);
-  padding: 60px;
-  height: 100%;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.AuthSidebar img {
-  height: 400px;
+
+.logo {
+  height: 40px;
   width: 100%;
 }
+
 .form {
-  width: 50%;
   gap: 10px;
   display: flex;
   text-align: center;
@@ -32,15 +25,16 @@
   background: white;
   flex-direction: column;
 }
+
+/* Forgot Password */
+.form .forgot__pass {
+  font-size: 14px;
+  color: var(--clr-gray);
+  text-align: end;
+}
 .form__title {
   color: var(--clr-neutral);
   font-size: 1em;
-}
-
-.form__logo {
-  color: var(--clr-neutral);
-  font-weight: bold;
-  font-size: 24px;
 }
 
 .form__field {
@@ -60,22 +54,6 @@
   flex-direction: column;
 }
 
-.file__input {
-  display: none;
-}
-
-.file__label {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  gap: 10px;
-  color: var(--clr-accent-light);
-}
-
-.file__label img {
-  width: 32px;
-}
-
 .form button {
   background-color: var(--clr-primary);
   font-weight: bold;
@@ -84,6 +62,7 @@
   padding: 10px;
   cursor: pointer;
 }
+
 .form__switch {
   color: var(--clr-neutral);
   font-size: 16px;
@@ -95,80 +74,106 @@
   text-decoration: none;
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
-.container {
-  margin: 20vh auto 0 auto;
-}
-
-#heading {
-  padding-bottom: 1em;
-  color: var(--clr-white);
-  text-align: center;
-}
-#info {
-  width: 400px;
-  padding: 20px;
-  margin: auto;
-  border-radius: 4px;
-  background: whitesmoke;
-}
-#info h1 {
-  color: var(--clr-black);
-  text-align: center;
-  padding: 6px;
-}
-#btn {
-  padding: 10px;
-  margin-top: 10px;
-  width: 100%;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  background: var(--clr-blue);
-}
-
-.fields {
+/* Homepage */
+.app {
   display: flex;
+  font-weight: 500;
+  min-height: 100vh;
   flex-direction: column;
+  background-color: white;
 }
 
-.fields input {
-  border: 2px solid var(--clr-white);
-  border-radius: 4px;
-  display: block;
-  padding: 10px;
-  margin: 8px 0;
-  width: 100%;
+/* Navbar */
+.navbar {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--clr-accent);
 }
 
-.fields input:focus {
-  outline: 0;
+.nav-links {
+  gap: 10px;
+  display: flex;
 }
 
-.fields input.error {
-  background: white url(images/invalid.png) no-repeat;
-  background-position: 97%;
-  background-size: 8% 85%;
-  border-color: var(--clr-red);
+.navbar a {
+  text-decoration: none;
+  color: var(--clr-light);
 }
 
-.fields input.success {
-  border-color: var(--clr-green);
+.drop__down {
+  gap: 10px;
+  padding: 20px;
+  display: flex;
+  color: var(--clr-light);
+  background-color: var(--clr-accent);
 }
 
-.fields .error {
-  color: var(--clr-red);
-  font-size: 12px;
+/* Container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-primary);
+}
+
+/* Image Slider */
+.slider__img {
+  padding: 30px;
+  padding-right: 0px;
+  object-fit: contain;
+}
+
+.banner {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Footer */
+.footer {
+  color: white;
+  margin-top: auto;
+  background-color: var(--clr-primary);
+}
+
+.footer-sec-padding {
+  padding: 60px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-links .social {
+  display: flex;
+}
+
+.footer-links-div img {
+  height: 30px;
+  width: 30px;
+}
+
+.footer-below {
+  padding: 15px;
+  background-color: var(--clr-footer-below);
+}
+
+.footer-below-padding {
+  padding: 20px;
+}
+
+.footer-copyright {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
 }

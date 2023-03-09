@@ -1,22 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { AuthSidebar } from "../components/AuthSidebar";
+import TrophyHubLogo from "../assets/trophies-hub-logo.png";
 export const Login = () => {
+  const navigate = useNavigate();
+  async function handleLogin(e) {
+    e.preventDefault();
+    if (email != "" && password != "") {
+      const res = await fetch("http://localhost:3000/api/v1/user/signin", {
+        method: "POST",
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await res.json();
+      console.log(result);
+      localStorage.setItem("token", result.token);
+      const token = localStorage.getItem("token");
+      console.log(`generated token - ${token}`);
+      navigate("/home");
+    }
+  }
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <div>
       <div className="wrapper">
-        <AuthSidebar />
         <div className="form">
+          <img className="logo" src={TrophyHubLogo} alt="" />
           <span className="form__logo">Trophy Hub</span>
           <span className="form__title">Log in</span>
-          <form action="">
+          <form onSubmit={handleLogin} action="">
             {/* Textfields */}
-            <input className="form__field" type="email" placeholder="email" />
             <input
+              onChange={(e) => setEmail(e.target.value)}
+              className="form__field"
+              type="email"
+              placeholder="email"
+            />
+            <input
+              onChange={(e) => setPassword(e.target.value)}
               className="form__field"
               type="password"
               placeholder="password"
             />
+            <Link className="forgot__pass">Forgot Password?</Link>
             {/* Log-in Button */}
             <button>Log in</button>
           </form>
@@ -31,59 +65,3 @@ export const Login = () => {
     </div>
   );
 };
-// <div class="container">
-//   <h1 id="heading">Form validation using javascript</h1>
-//   <form novalidate action="" id="info">
-//     <h1>Registration</h1>
-//     <div class="fields">
-//       <label for="name">User-name</label>
-//       <input
-//         type="text"
-//         name="name"
-//         id="name"
-//         value=""
-//         placeholder="steve rogers"
-//       />
-//       <div class="error"></div>
-//     </div>
-//     <div class="fields">
-//       <label for="age">Age</label>
-//       <input type="text" name="age" id="age" value="" placeholder="112" />
-//       <div class="error"></div>
-//     </div>
-//     <div class="fields">
-//       <label for="email">Email</label>
-//       <input
-//         type="email"
-//         name="email"
-//         id="email"
-//         value=""
-//         placeholder="firstavenger@gmail.com"
-//       />
-//       <div class="error"></div>
-//     </div>
-//     <div class="fields">
-//       <label for="pass">Password</label>
-//       <input
-//         type="password"
-//         name="pass"
-//         id="pass"
-//         value=""
-//         placeholder="must have atleast 6 characters"
-//       />
-//       <div class="error"></div>
-//     </div>
-//     <div class="fields">
-//       <label for="confirm">Confirm Password</label>
-//       <input
-//         type="password"
-//         name="confirm"
-//         id="confirm"
-//         value=""
-//         placeholder="Retype password"
-//       />
-//       <div class="error"></div>
-//     </div>
-//     <button id="btn" type="submit">Submit</button>
-//   </form>
-// </div>

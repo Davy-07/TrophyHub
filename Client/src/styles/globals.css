@@ -1,53 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 /* Colors & font-sizes */
 :root {
-	--clr-bg: #414a4c;
-	--clr-primary: hsl(210, 69%, 25%);
-	--clr-accent: hsla(210, 69%, 25%, 0.8);
-	--clr-accent-light: hsla(210, 69%, 25%, 0.8);
-	--clr-neutral: hsl(243, 24%, 31%);
-	--clr-neutral-light: hsl(242, 22%, 45%);
-	--clr-gray: hsl(0, 0%, 69%);
+  /* Background */
+  --clr-bg: #414a4c;
 
-	--clr-white: #f0f0f0;
-	--clr-black: #0f2027;
-	--clr-blue: hsl(234, 65%, 46%);
-	--clr-green: hsl(98, 40%, 61%);
-	--clr-red: hsl(348, 100%, 61%);
+  /* Main colors */
+  --clr-primary: #263c97;
+  --clr-light: #fff;
 
-	--ff-primary: "Be Vietnam Pro", sans-serif;
-	--ff-body: var(--ff-primary);
-	--ff-heading: var(--ff-primary);
+  /* Accent */
+  --clr-accent: #283d98;
 
-	--fw-regular: 400;
-	--fw-semi-bold: 600;
-	--fw-bold: 800;
+  /* Neutral & Others */
+  --clr-neutral: hsl(243, 24%, 31%);
+  --clr-neutral-light: hsl(242, 22%, 45%);
 
-	--fs-300: 0.875rem;
-	--fs-500: 1rem;
-	--fs-700: 1.875rem;
-	--fs-900: 2.5rem;
+  /* For Components */
+  /* Footer */
+  --clr-footer-below: #202536;
+
+  /* Standard */
+  --clr-gray: rgba(0, 0, 0, 0.68);
+  --clr-white: rgb(240, 240, 240);
+  --clr-black: rgb(15, 32, 39);
+  --clr-blue: rgb(41, 56, 194);
+  --clr-green: rgb(145, 195, 116);
+  --clr-red: rgb(255, 56, 96);
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-secondary: "Be Vietnam Pro", sans-serif;
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 800;
+
+  --fs-300: 0.875rem;
+  --fs-500: 1rem;
+  --fs-700: 1.875rem;
+  --fs-900: 2.5rem;
 }
 @media (min-width: 50em) {
-	:root {
-		--fs-900: 3.5rem;
-		--fs-700: 2.5rem;
-	}
+  :root {
+    --fs-900: 3.5rem;
+    --fs-700: 2.5rem;
+  }
 }
 
 /* Utilities Classes */
 .text-primary {
-	color: var(--clr-primary);
+  color: var(--clr-primary);
 }
 .text-accent {
-	color: var(--clr-accent);
+  color: var(--clr-accent);
 }
 .text-accent-light {
-	color: var(--clr-accent-light);
+  color: var(--clr-accent-light);
 }
 
 .text-neutral {
-	color: var(--clr-neutral);
+  color: var(--clr-neutral);
 }
 .text-neutral-light {
-	color: var(--clr-neutral-light);
+  color: var(--clr-neutral-light);
 }
