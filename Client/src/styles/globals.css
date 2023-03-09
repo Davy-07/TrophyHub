@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 /* Colors & font-sizes */
 :root {
   /* Background */
@@ -25,8 +29,8 @@
   --clr-blue: rgb(41, 56, 194);
   --clr-green: rgb(145, 195, 116);
   --clr-red: rgb(255, 56, 96);
-
-  --ff-primary: "Be Vietnam Pro", sans-serif;
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-secondary: "Be Vietnam Pro", sans-serif;
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
 

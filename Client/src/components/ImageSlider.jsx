@@ -51,12 +51,7 @@ export const ImageSlider = ({ deviceType }) => {
   const imageList = [];
   for (let i = 0; i < images.length; i++) {
     imageList.push(
-      <img
-        key={i}
-        className="slider__img"
-        draggable={false}
-        src={TrophyHubImage}
-      />
+      <img key={i} className="slider__img" draggable={false} src={images[i]} />
     );
   }
 
@@ -64,8 +59,8 @@ export const ImageSlider = ({ deviceType }) => {
     <div className="container">
       <Carousel
         ssr
-        deviceType={deviceType}
         itemClass="image-item"
+        deviceType={deviceType}
         responsive={responsive}
       >
         {imageList}

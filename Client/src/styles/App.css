@@ -1,16 +1,14 @@
 @import url("globals.css");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 * {
   font-family: var(--ff-primary);
 }
 
 .wrapper {
+  display: flex;
   min-height: 100vh;
   align-items: center;
-  justify-content: center;
-  display: flex;
   padding: 90px 200px;
+  justify-content: center;
   background: var(--clr-accent);
 }
 
@@ -79,6 +77,7 @@
 /* Homepage */
 .app {
   display: flex;
+  font-weight: 500;
   min-height: 100vh;
   flex-direction: column;
   background-color: white;
@@ -87,14 +86,15 @@
 /* Navbar */
 .navbar {
   display: flex;
+  padding: 20px;
   align-items: center;
-  background-color: var(--clr-accent);
   justify-content: space-between;
+  background-color: var(--clr-accent);
 }
 
 .nav-links {
-  display: flex;
   gap: 10px;
+  display: flex;
 }
 
 .navbar a {
@@ -104,6 +104,7 @@
 
 .drop__down {
   gap: 10px;
+  padding: 20px;
   display: flex;
   color: var(--clr-light);
   background-color: var(--clr-accent);
@@ -120,6 +121,7 @@
 /* Image Slider */
 .slider__img {
   padding: 30px;
+  padding-right: 0px;
   object-fit: contain;
 }
 
