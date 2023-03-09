@@ -125,6 +125,13 @@
   object-fit: contain;
 }
 
+.banner {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 /* Footer */
 .footer {
   color: white;

@@ -6,7 +6,7 @@ export const Login = () => {
   const navigate = useNavigate();
   async function handleLogin(e) {
     e.preventDefault();
-    if (username != "" && email != "" && password != "" && phone != "") {
+    if (email != "" && password != "") {
       const res = await fetch("http://localhost:3000/api/v1/user/signin", {
         method: "POST",
         body: JSON.stringify({
