@@ -18,12 +18,12 @@ app.use(notFound);
 app.use(errorHandler);
 
 const start = async () => {
-	try {
-		await connectDB(process.env.mongo_uri);
-		app.listen(port, console.log(`Server listening on port 3000`));
-	} catch (error) {
-		console.log(error);
-	}
+  try {
+    await connectDB(process.env.mongo_uri);
+    app.listen(port, console.log(`Server listening on port 3000`));
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 start();
