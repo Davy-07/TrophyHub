@@ -6,22 +6,24 @@ export const Login = () => {
   const navigate = useNavigate();
   async function handleLogin(e) {
     e.preventDefault();
-    const res = await fetch("http://localhost:3000/api/v1/user/signin", {
-      method: "POST",
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const result = await res.json();
-    console.log(result);
-    localStorage.setItem("token", result.token);
-    const token = localStorage.getItem("token");
-    console.log(`generated token - ${token}`);
-    navigate("/home");
+    if (username != "" && email != "" && password != "" && phone != "") {
+      const res = await fetch("http://localhost:3000/api/v1/user/signin", {
+        method: "POST",
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await res.json();
+      console.log(result);
+      localStorage.setItem("token", result.token);
+      const token = localStorage.getItem("token");
+      console.log(`generated token - ${token}`);
+      navigate("/home");
+    }
   }
 
   const [email, setEmail] = useState("");

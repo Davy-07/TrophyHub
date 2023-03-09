@@ -8,25 +8,29 @@ export const Signup = () => {
 
   async function handleSignup(e) {
     e.preventDefault();
-    console.log(username);
-    const res = await fetch("http://localhost:3000/api/v1/user/register", {
-      method: "POST",
-      body: JSON.stringify({
-        name: username,
-        email: email,
-        phone: `+91${phone}`,
-        pwd: password,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const result = await res.json();
-    console.log(result.state_id);
-    navigate("/verification", {
-      state: { stateId: result.state_id, userId: result },
-    });
-    console.log(result);
+
+    // [ ] Add Form Validation
+    if (username != "" && email != "" && password != "" && phone != "") {
+      console.log(username);
+      const res = await fetch("http://localhost:3000/api/v1/user/register", {
+        method: "POST",
+        body: JSON.stringify({
+          name: username,
+          email: email,
+          phone: `+91${phone}`,
+          pwd: password,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await res.json();
+      console.log(result.state_id);
+      navigate("/verification", {
+        state: { stateId: result.state_id, userId: result },
+      });
+      console.log(result);
+    }
   }
 
   const [username, setUsername] = useState("");

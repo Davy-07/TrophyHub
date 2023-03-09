@@ -21,10 +21,10 @@
   /* Standard */
   --clr-gray: rgba(0, 0, 0, 0.68);
   --clr-white: rgb(240, 240, 240);
-  --clr-black: #0f2027;
-  --clr-blue: hsl(234, 65%, 46%);
-  --clr-green: hsl(98, 40%, 61%);
-  --clr-red: hsl(348, 100%, 61%);
+  --clr-black: rgb(15, 32, 39);
+  --clr-blue: rgb(41, 56, 194);
+  --clr-green: rgb(145, 195, 116);
+  --clr-red: rgb(255, 56, 96);
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
   --ff-body: var(--ff-primary);

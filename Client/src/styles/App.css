@@ -1,5 +1,6 @@
 @import url("globals.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   font-family: var(--ff-primary);
 }
@@ -38,12 +39,6 @@
   font-size: 1em;
 }
 
-.form__logo {
-  color: var(--clr-neutral);
-  font-weight: bold;
-  font-size: 24px;
-}
-
 .form__field {
   border: none;
   padding: 15px;
@@ -69,6 +64,7 @@
   padding: 10px;
   cursor: pointer;
 }
+
 .form__switch {
   color: var(--clr-neutral);
   font-size: 16px;
@@ -80,13 +76,54 @@
   text-decoration: none;
 }
 
-.home {
+/* Homepage */
+.app {
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
   background-color: white;
-  min-height: 100vh;
 }
 
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-accent);
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--clr-light);
+}
+
+.drop__down {
+  gap: 10px;
+  display: flex;
+  color: var(--clr-light);
+  background-color: var(--clr-accent);
+}
+
+/* Container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-primary);
+}
+
+/* Image Slider */
+.slider__img {
+  padding: 30px;
+  object-fit: contain;
+}
+
+/* Footer */
 .footer {
   color: white;
   margin-top: auto;
@@ -118,7 +155,7 @@
 }
 
 .footer-below {
-  padding: 20px;
+  padding: 15px;
   background-color: var(--clr-footer-below);
 }
 
