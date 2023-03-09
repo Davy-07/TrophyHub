@@ -86,12 +86,45 @@ const signin = async(req,res)=>{
         }
         
         try{
-            const token = jwt.sign({id:user._id,name:user.name,email:user.email,phone:user.phone},process.env.JWT_TOKEN,{expiresIn:'30d'});
-            res.status(200).json({message:"SignIn SuccessFull",token});
+            const accessToken = jwt.sign({id:user._id,name:user.name,email:user.email,phone:user.phone},process.env.JWT_TOKEN,{expiresIn:'1d'});
+            const refreshToken = jwt.sign({id:user._id,name:user.name,email:user.email,phone:user.phone},process.env.refresh_secret,{expiresIn:"30d"});
+            await User.updateOne({email:email},{
+                refreshToken:refreshToken
+            });
+            res.status(200).cookie('refresh',refreshToken,{
+                httpOnly: true,
+                secure: true,
+                maxAge: 30*24*60*60*1000
+            }).json({message:"Signin Successfull",accessToken});
         }
         catch(err){
             throw new CustomAPIError("Oops! Something Went Wrong");        
         }
+}
+
+const refresh = async(req,res)=>{
+
+    console.log(req.cookies.refresh);
+    if(req.cookies.refresh){
+
+                const refreshToken = req.cookies.refresh;
+                const payload = await User.findOne({refreshToken});     
+                const user = {
+                    "id":payload._id,
+                    "name":payload.name,
+                    "email":payload.email,
+                    "phone":payload.phone
+                };
+                try{
+                        const verify = jwt.verify(refreshToken,process.env.refresh_secret);
+                        const newAccessToken = jwt.sign(user,process.env.JWT_TOKEN,{expiresIn:"1d"});
+                        res.status(200).json({newAccessToken});
+                }catch(err){
+                    throw new CustomAPIError("Token Verification failed",401);
+                }
+
+    }
+
 }
 
 const demo = async(req,res)=>{
@@ -101,4 +134,4 @@ const demo = async(req,res)=>{
 
 }
 
-module.exports = {register,verify,signin,demo};
+module.exports = {register,verify,signin,demo,refresh};

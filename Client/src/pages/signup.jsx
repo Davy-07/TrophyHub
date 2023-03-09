@@ -52,6 +52,15 @@ export const Signup = () => {
               type="text"
               placeholder="User name"
             />
+<<<<<<< HEAD
+            <input
+              className="form__field"
+              type="number"
+              placeholder="phone number"
+            />
+            <input className="form__field" type="email" placeholder="Email" />
+=======
+>>>>>>> e0a0ac17ab2fe50002ba9ffe8c5a227d904b7b5a
             <input
               onChange={(e) => setPhone(e.target.value)}
               className="form__field"
