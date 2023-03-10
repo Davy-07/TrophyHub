@@ -1,15 +1,14 @@
 import React from "react";
 import instagram from "../assets/instagram.png";
+import { SearchBar } from "./SearchBar";
 export const Footer = () => {
   const year = new Date().getFullYear();
   return (
+    // [ ] : Make Footer Responsive
     <div className="footer">
       <div className="newsletter">
         <span>Sign up to our News Letter</span>
-        <div className="subscribe">
-          <input type="text" />
-          <button>Subscribe</button>
-        </div>
+        <SearchBar />
       </div>
       <div className="footer-sec-padding">
         <div className="footer-links">

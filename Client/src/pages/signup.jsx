@@ -9,7 +9,8 @@ export const Signup = () => {
   async function handleSignup(e) {
     e.preventDefault();
 
-    // [ ] Add Form Validation
+    // [ ]: Add Form Validation
+    // [ ]: DRY out these Requests
     if (username != "" && email != "" && password != "" && phone != "") {
       console.log(username);
       const res = await fetch("http://localhost:3000/api/v1/user/register", {
@@ -25,6 +26,8 @@ export const Signup = () => {
         },
         withCredentials: true,
       });
+
+      // Result
       const result = await res.json();
       console.log(result.state_id);
       navigate("/verification", {

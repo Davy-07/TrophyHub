@@ -1,3 +1,4 @@
+@import url("index.css");
 @import url("globals.css");
 * {
   font-family: var(--ff-primary);
@@ -56,7 +57,7 @@
 
 .form button {
   background-color: var(--clr-primary);
-  font-weight: bold;
+  font-weight: var(--fw-bold);
   color: white;
   border: none;
   padding: 10px;
@@ -77,8 +78,8 @@
 /* Homepage */
 .app {
   display: flex;
-  font-weight: 500;
-  min-height: 100vh;
+  font-weight: var(--fw-medium);
+  min-height: 100%;
   flex-direction: column;
   background-color: white;
 }
@@ -92,6 +93,10 @@
   background-color: var(--clr-accent);
 }
 
+.nav__search {
+  height: 50px;
+}
+
 .nav-links {
   gap: 20px;
   display: flex;
@@ -102,6 +107,26 @@
   color: var(--clr-light);
 }
 
+.nav__field {
+  border: none;
+  height: 100%;
+  width: 600px;
+  padding: 0 10px;
+  font-size: 14px;
+  outline-color: transparent;
+  font-weight: var(--fw-light);
+}
+
+.nav__field:focus {
+  outline: 1px solid black;
+}
+
+.btn {
+  height: 100%;
+  outline-color: transparent;
+  border-color: transparent;
+  border-radius: 0 16px 16px 0;
+}
 .drop__down {
   gap: 10px;
   padding: 20px;
@@ -129,13 +154,36 @@
   height: 300px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
-.heading {
+.key__points {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.sale__banner {
+  background-color: var(--clr-sale-banner);
+  color: var(--clr-light);
+}
+
+.banner__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner__left:nth-child(1) {
+  font-size: 96px;
+}
+
+.banner__left span:nth-child(2) {
+  font-size: 40px;
+}
+
+.banner__left span:nth-child(3) {
+  font-size: 15px;
+  color: var(--clr-black);
 }
 
 /* Footer */

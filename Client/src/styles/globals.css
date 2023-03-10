@@ -19,6 +19,10 @@
   --clr-neutral-light: hsl(242, 22%, 45%);
 
   /* For Components */
+  /* Banner */
+  --clr-sale-banner: #f55353;
+  --clr-discount-banner1: #f9ac62;
+  --clr-discount-banner2: #9c85fc;
   /* Footer */
   --clr-footer-below: #202536;
 
@@ -34,8 +38,9 @@
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
 
+  --fw-light: 300;
   --fw-regular: 400;
-  --fw-semi-bold: 600;
+  --fw-medium: 500;
   --fw-bold: 800;
 
   --fs-300: 0.875rem;

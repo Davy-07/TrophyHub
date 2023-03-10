@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import TrophyHubLogo from "../assets/trophies-hub-logo.png";
+import { SearchBar } from "./SearchBar";
 
 export const Navbar = () => {
   //   Logs out & Removes access token from local storage
@@ -14,12 +15,12 @@ export const Navbar = () => {
 
   const navigate = useNavigate();
   return (
+    // [ ]: Make Navbar 3 columned, Resonate completely with dukamarket
+    // [ ]: ReactJS Popups for login & signup
+    // [ ]: Cart
     <div className="navbar">
       <img src={TrophyHubLogo} className="" />
-      <div className="nav-search">
-        <input type="text" />
-        <button className="btn">Search</button>
-      </div>
+      <SearchBar />
       <div className="nav-links">
         <Link>Login / Register</Link>
         <Link>My Cart</Link>

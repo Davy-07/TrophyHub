@@ -49,7 +49,7 @@ export const ImageSlider = ({ deviceType }) => {
   }
 
   const imageList = [];
-  for (let i = 0; i < images.length; i++) {
+  for (let i = 0; i < 6; i++) {
     imageList.push(
       <img key={i} className="slider__img" draggable={false} src={images[i]} />
     );
